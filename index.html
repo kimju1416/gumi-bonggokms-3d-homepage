@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="경상북도 구미시 봉곡중학교를 소개하는 3D 애니메이션 홈페이지"
+    />
+    <title>봉곡중학교 | 3D School Landing</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <header class="site-header" aria-label="상단 메뉴">
+      <a class="brand" href="#top" aria-label="봉곡중학교 홈">
+        <span class="brand-mark" aria-hidden="true">BG</span>
+        <span>
+          <strong>봉곡중학교</strong>
+          <small>Bonggok Middle School</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="주요 섹션">
+        <a href="#identity">상징</a>
+        <a href="#today">현황</a>
+        <a href="#timeline">연혁</a>
+        <a href="#contact">오시는 길</a>
+      </nav>
+      <a class="header-cta" href="https://school.gyo6.net/gmbonggokms" target="_blank" rel="noreferrer">
+        공식 홈페이지
+      </a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-label="봉곡중학교 3D 소개">
+        <canvas id="campus3d" aria-label="움직이는 3D 캠퍼스 장면"></canvas>
+        <div class="hero-vignette" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Gumi · Gyeongsangbuk-do</p>
+          <h1>봉곡중학교</h1>
+          <p class="hero-lead">
+            금오산과 다봉산의 기운을 품은 배움터. 올바르고 창의적인 사람으로 자라는
+            학교의 오늘을 3D 공간과 움직임으로 담았습니다.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#today">학교 현황 보기</a>
+            <a class="secondary-action" href="#timeline">연혁 탐험</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="핵심 정보">
+          <span>공립 · 남녀공학</span>
+          <strong>2026 기준 781명</strong>
+          <small>29학급, 교직원 80명</small>
+        </div>
+      </section>
+
+      <section class="identity section" id="identity">
+        <div class="section-heading">
+          <p class="eyebrow">School Identity</p>
+          <h2>학교의 색과 마음</h2>
+          <p>
+            공식 학교상징 페이지의 공개 정보를 바탕으로 교훈, 교목, 교화를 시각화했습니다.
+          </p>
+        </div>
+        <div class="identity-grid">
+          <article class="tilt-card motto-card">
+            <span class="card-kicker">교훈</span>
+            <h3>올바르고 창의적인 사람이 되자</h3>
+            <p>배움의 방향을 행동과 생각, 그리고 창의성으로 연결하는 문장입니다.</p>
+          </article>
+          <article class="tilt-card symbol-card">
+            <span class="symbol-orb tree" aria-hidden="true"></span>
+            <span class="card-kicker">교목</span>
+            <h3>느티나무</h3>
+            <p>희망과 밝은 마음을 상징합니다.</p>
+          </article>
+          <article class="tilt-card symbol-card">
+            <span class="symbol-orb flower" aria-hidden="true"></span>
+            <span class="card-kicker">교화</span>
+            <h3>목련</h3>
+            <p>순결과 사랑을 상징합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="today section" id="today">
+        <div class="section-heading compact">
+          <p class="eyebrow">2026. 3. 4. 기준</p>
+          <h2>한눈에 보는 봉곡중</h2>
+        </div>
+        <div class="stats-grid" aria-label="학교 현황 숫자">
+          <article class="stat-card">
+            <strong data-count="781">0</strong>
+            <span>학생</span>
+          </article>
+          <article class="stat-card">
+            <strong data-count="29">0</strong>
+            <span>학급</span>
+          </article>
+          <article class="stat-card">
+            <strong data-count="80">0</strong>
+            <span>교직원</span>
+          </article>
+          <article class="stat-card">
+            <strong data-count="52">0</strong>
+            <span>교사</span>
+          </article>
+        </div>
+        <div class="grade-board">
+          <div>
+            <span>1학년</span>
+            <strong>233명</strong>
+            <meter min="0" max="306" value="233">233명</meter>
+          </div>
+          <div>
+            <span>2학년</span>
+            <strong>306명</strong>
+            <meter min="0" max="306" value="306">306명</meter>
+          </div>
+          <div>
+            <span>3학년</span>
+            <strong>242명</strong>
+            <meter min="0" max="306" value="242">242명</meter>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline section" id="timeline">
+        <div class="section-heading">
+          <p class="eyebrow">Milestones</p>
+          <h2>시간 위에 쌓인 장면들</h2>
+          <p>학교연혁 공개 페이지에서 확인한 주요 이정표를 간결하게 정리했습니다.</p>
+        </div>
+        <ol class="timeline-list">
+          <li>
+            <time datetime="2001-08-09">2001.08.09</time>
+            <strong>학급 승인</strong>
+            <span>36학급 승인으로 학교의 시작을 준비했습니다.</span>
+          </li>
+          <li>
+            <time datetime="2003-03-05">2003.03.05</time>
+            <strong>제1회 입학식</strong>
+            <span>11학급, 입학생 345명으로 첫 발걸음을 열었습니다.</span>
+          </li>
+          <li>
+            <time datetime="2011-12-21">2011.12.21</time>
+            <strong>유네스코 학교 지정</strong>
+            <span>더 넓은 배움과 교류의 방향을 확장했습니다.</span>
+          </li>
+          <li>
+            <time datetime="2020-02-17">2020.02.17</time>
+            <strong>소프트웨어 선도학교 지정</strong>
+            <span>디지털 역량을 키우는 교육 흐름을 이어갔습니다.</span>
+          </li>
+          <li>
+            <time datetime="2026-03-04">2026.03.04</time>
+            <strong>제24회 입학식</strong>
+            <span>9학급, 233명의 새 출발이 더해졌습니다.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Visit & Contact</p>
+            <h2>경북 구미시 봉곡서로11안길 9-8</h2>
+            <p>교무실 054-442-1093 · 행정실 054-442-1091 · 팩스 054-442-1096</p>
+          </div>
+          <div class="contact-actions">
+            <a class="primary-action" href="https://school.gyo6.net/gmbonggokms" target="_blank" rel="noreferrer">
+              공식 홈페이지
+            </a>
+            <a class="secondary-action" href="https://map.kakao.com/?q=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EA%B5%AC%EB%AF%B8%EC%8B%9C%20%EB%B4%89%EA%B3%A1%EC%84%9C%EB%A1%9C11%EC%95%88%EA%B8%B8%209-8" target="_blank" rel="noreferrer">
+              지도 열기
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="sources section" aria-label="자료 출처">
+        <h2>자료 출처</h2>
+        <p>
+          학교 기본 정보는 NEIS 학교기본정보 API와 봉곡중학교 공식 홈페이지의 학교상징,
+          학교현황, 학교연혁 공개 페이지를 기준으로 요약했습니다.
+        </p>
+        <div class="source-links">
+          <a href="https://open.neis.go.kr/hub/schoolInfo?Type=json&pIndex=1&pSize=20&SCHUL_NM=%EB%B4%89%EA%B3%A1%EC%A4%91%ED%95%99%EA%B5%90" target="_blank" rel="noreferrer">NEIS 학교기본정보</a>
+          <a href="https://school.gyo6.net/gmbonggokms/cm/cntnts/cntntsView.do?mi=127010&cntntsId=127010" target="_blank" rel="noreferrer">학교상징</a>
+          <a href="https://school.gyo6.net/gmbonggokms/cm/cntnts/cntntsView.do?mi=127012&cntntsId=127012" target="_blank" rel="noreferrer">학교현황</a>
+          <a href="https://school.gyo6.net/gmbonggokms/hm/hist/selectHistList.do?mi=127009" target="_blank" rel="noreferrer">학교연혁</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>봉곡중학교 3D 소개 페이지 · 비공식 디자인 시안</p>
+      <a href="#top">맨 위로</a>
+    </footer>
+
+    <script type="module" src="./assets/main.js"></script>
+  </body>
+</html>
