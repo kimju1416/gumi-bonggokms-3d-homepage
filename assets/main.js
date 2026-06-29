@@ -15,6 +15,13 @@ renderer.shadowMap.enabled = true;
 const root = new THREE.Group();
 scene.add(root);
 
+function setSceneLayout() {
+  const compact = window.innerWidth < 700;
+  root.position.x = compact ? -0.6 : 2.4;
+  root.position.y = compact ? -0.35 : 0;
+  camera.position.set(compact ? 7.5 : 9.2, compact ? 6.2 : 5.6, compact ? 21 : 18.5);
+}
+
 const ambient = new THREE.HemisphereLight(0xdffcff, 0xb7d9c6, 2.6);
 scene.add(ambient);
 
@@ -124,11 +131,13 @@ window.addEventListener("pointermove", (event) => {
 });
 
 function resize() {
+  setSceneLayout();
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
+setSceneLayout();
 window.addEventListener("resize", resize);
 
 const clock = new THREE.Clock();

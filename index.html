@@ -7,11 +7,12 @@
       name="description"
       content="경상북도 구미시 봉곡중학교를 소개하는 3D 애니메이션 홈페이지"
     />
-    <title>봉곡중학교 | 3D School Landing</title>
+    <title>봉곡중학교 | 3D Interactive School</title>
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">본문 바로가기</a>
+    <div class="ambient-grid" aria-hidden="true"></div>
 
     <header class="site-header" aria-label="상단 메뉴">
       <a class="brand" href="#top" aria-label="봉곡중학교 홈">
@@ -25,7 +26,7 @@
         <a href="#identity">상징</a>
         <a href="#today">현황</a>
         <a href="#timeline">연혁</a>
-        <a href="#contact">오시는 길</a>
+        <a href="#contact">위치</a>
       </nav>
       <a class="header-cta" href="https://school.gyo6.net/gmbonggokms" target="_blank" rel="noreferrer">
         공식 홈페이지
@@ -35,47 +36,79 @@
     <main id="main">
       <section class="hero" id="top" aria-label="봉곡중학교 3D 소개">
         <canvas id="campus3d" aria-label="움직이는 3D 캠퍼스 장면"></canvas>
-        <div class="hero-vignette" aria-hidden="true"></div>
+        <div class="hero-wash" aria-hidden="true"></div>
+
         <div class="hero-copy">
-          <p class="eyebrow">Gumi · Gyeongsangbuk-do</p>
+          <p class="eyebrow">Gumi · Future Learning</p>
           <h1>봉곡중학교</h1>
+          <p class="hero-tagline">배움이 움직이는 학교</p>
           <p class="hero-lead">
-            금오산과 다봉산의 기운을 품은 배움터. 올바르고 창의적인 사람으로 자라는
-            학교의 오늘을 3D 공간과 움직임으로 담았습니다.
+            금오산과 다봉산의 기운을 품은 구미의 공립 중학교.
+            올바르고 창의적인 사람이 되는 여정을 인터랙티브 3D 무대로 표현했습니다.
           </p>
+
           <div class="hero-actions">
-            <a class="primary-action" href="#today">학교 현황 보기</a>
-            <a class="secondary-action" href="#timeline">연혁 탐험</a>
+            <a class="primary-action" href="#today">현황 보기</a>
+            <a class="secondary-action" href="#identity">상징 보기</a>
+          </div>
+
+          <div class="hero-meta" aria-label="학교 핵심 정보">
+            <span>공립</span>
+            <span>남녀공학</span>
+            <span>경상북도 구미</span>
           </div>
         </div>
-        <div class="hero-panel" aria-label="핵심 정보">
-          <span>공립 · 남녀공학</span>
-          <strong>2026 기준 781명</strong>
-          <small>29학급, 교직원 80명</small>
-        </div>
+
+        <aside class="hero-dashboard" aria-label="2026 학교 현황 요약">
+          <p>2026 Snapshot</p>
+          <strong>781</strong>
+          <span>학생 · 29학급 · 교직원 80명</span>
+          <div class="mini-bars" aria-hidden="true">
+            <i style="--h: 76%"></i>
+            <i style="--h: 100%"></i>
+            <i style="--h: 79%"></i>
+          </div>
+        </aside>
+      </section>
+
+      <section class="motion-strip" aria-label="봉곡중학교 핵심 포인트">
+        <article>
+          <span>01</span>
+          <strong>올바름</strong>
+          <p>교훈이 말하는 태도와 책임</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>창의성</strong>
+          <p>생각을 넓히는 수업과 활동</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>도전</strong>
+          <p>소프트웨어·스포츠·동아리 경험</p>
+        </article>
       </section>
 
       <section class="identity section" id="identity">
         <div class="section-heading">
           <p class="eyebrow">School Identity</p>
-          <h2>학교의 색과 마음</h2>
-          <p>
-            공식 학교상징 페이지의 공개 정보를 바탕으로 교훈, 교목, 교화를 시각화했습니다.
-          </p>
+          <h2>학교의 상징을 더 선명하게</h2>
+          <p>공식 학교상징 페이지의 공개 정보를 바탕으로 봉곡중학교의 메시지를 시각화했습니다.</p>
         </div>
+
         <div class="identity-grid">
           <article class="tilt-card motto-card">
             <span class="card-kicker">교훈</span>
             <h3>올바르고 창의적인 사람이 되자</h3>
-            <p>배움의 방향을 행동과 생각, 그리고 창의성으로 연결하는 문장입니다.</p>
+            <p>학생의 태도, 생각, 성장을 하나의 방향으로 모으는 봉곡중학교의 중심 문장입니다.</p>
           </article>
-          <article class="tilt-card symbol-card">
+          <article class="tilt-card symbol-card tree-card">
             <span class="symbol-orb tree" aria-hidden="true"></span>
             <span class="card-kicker">교목</span>
             <h3>느티나무</h3>
             <p>희망과 밝은 마음을 상징합니다.</p>
           </article>
-          <article class="tilt-card symbol-card">
+          <article class="tilt-card symbol-card flower-card">
             <span class="symbol-orb flower" aria-hidden="true"></span>
             <span class="card-kicker">교화</span>
             <h3>목련</h3>
@@ -87,8 +120,9 @@
       <section class="today section" id="today">
         <div class="section-heading compact">
           <p class="eyebrow">2026. 3. 4. 기준</p>
-          <h2>한눈에 보는 봉곡중</h2>
+          <h2>숫자로 보는 오늘의 봉곡중</h2>
         </div>
+
         <div class="stats-grid" aria-label="학교 현황 숫자">
           <article class="stat-card">
             <strong data-count="781">0</strong>
@@ -107,6 +141,7 @@
             <span>교사</span>
           </article>
         </div>
+
         <div class="grade-board">
           <div>
             <span>1학년</span>
@@ -129,32 +164,33 @@
       <section class="timeline section" id="timeline">
         <div class="section-heading">
           <p class="eyebrow">Milestones</p>
-          <h2>시간 위에 쌓인 장면들</h2>
-          <p>학교연혁 공개 페이지에서 확인한 주요 이정표를 간결하게 정리했습니다.</p>
+          <h2>봉곡중학교가 지나온 장면</h2>
+          <p>공식 학교연혁에서 확인한 주요 이정표를 카드형 타임라인으로 정리했습니다.</p>
         </div>
+
         <ol class="timeline-list">
           <li>
-            <time datetime="2001-08-09">2001.08.09</time>
+            <time datetime="2001-08-09">2001</time>
             <strong>학급 승인</strong>
             <span>36학급 승인으로 학교의 시작을 준비했습니다.</span>
           </li>
           <li>
-            <time datetime="2003-03-05">2003.03.05</time>
+            <time datetime="2003-03-05">2003</time>
             <strong>제1회 입학식</strong>
             <span>11학급, 입학생 345명으로 첫 발걸음을 열었습니다.</span>
           </li>
           <li>
-            <time datetime="2011-12-21">2011.12.21</time>
+            <time datetime="2011-12-21">2011</time>
             <strong>유네스코 학교 지정</strong>
             <span>더 넓은 배움과 교류의 방향을 확장했습니다.</span>
           </li>
           <li>
-            <time datetime="2020-02-17">2020.02.17</time>
+            <time datetime="2020-02-17">2020</time>
             <strong>소프트웨어 선도학교 지정</strong>
             <span>디지털 역량을 키우는 교육 흐름을 이어갔습니다.</span>
           </li>
           <li>
-            <time datetime="2026-03-04">2026.03.04</time>
+            <time datetime="2026-03-04">2026</time>
             <strong>제24회 입학식</strong>
             <span>9학급, 233명의 새 출발이 더해졌습니다.</span>
           </li>
